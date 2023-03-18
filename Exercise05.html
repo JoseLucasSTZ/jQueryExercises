@@ -1,12 +1,47 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercise 05 - jQuery</title>
+    <style>
+        #bloco {
+            width: 200px;
+            height: 200px;
+            background-color: black;
+        }
+
+        #bloco2 {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.4.js"
+        integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+
+
 </head>
+
 <body>
+    <div style="display: flex; justify-content:space-around;">
+        <div id="bloco"></div>
+        <div id="bloco2"></div>
+    </div>
     
+    <p id="texto"></p>
 </body>
+<script>
+    $("#bloco").on({
+        click:()=>{$("texto").text("click in the square")},
+        mouseenter:()=>{$("#texto").text("Mouse entered the square")},
+        mouseeleave:()=>{$("#texto").text("mouse left the square")},
+        dbclick:()=>{$("#texto").text("Double click in the square")}
+    })
+
+
+</script>
+
 </html>
